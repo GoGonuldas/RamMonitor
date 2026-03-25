@@ -1,0 +1,66 @@
+[
+    {
+        "merged": "/Users/gorkangonuldas/.gradle/daemon/8.7/com.rammonitor.app-debug-43:/layout_item_app_mem.xml.flat",
+        "source": "/Users/gorkangonuldas/.gradle/daemon/8.7/com.rammonitor.app-main-45:/layout/item_app_mem.xml"
+    },
+    {
+        "merged": "com.rammonitor.app-debug-43:/drawable_live_dot_bg.xml.flat",
+        "source": "com.rammonitor.app-main-45:/drawable/live_dot_bg.xml"
+    },
+    {
+        "merged": "/Users/gorkangonuldas/.gradle/daemon/8.7/com.rammonitor.app-debug-43:/drawable_ic_memory.xml.flat",
+        "source": "/Users/gorkangonuldas/.gradle/daemon/8.7/com.rammonitor.app-main-45:/drawable/ic_memory.xml"
+    },
+    {
+        "merged": "/Users/gorkangonuldas/.gradle/daemon/8.7/com.rammonitor.app-debug-43:/drawable_dot_green.xml.flat",
+        "source": "/Users/gorkangonuldas/.gradle/daemon/8.7/com.rammonitor.app-main-45:/drawable/dot_green.xml"
+    },
+    {
+        "merged": "/Users/gorkangonuldas/.gradle/daemon/8.7/com.rammonitor.app-debug-43:/layout_fragment_history.xml.flat",
+        "source": "/Users/gorkangonuldas/.gradle/daemon/8.7/com.rammonitor.app-main-45:/layout/fragment_history.xml"
+    },
+    {
+        "merged": "com.rammonitor.app-debug-43:/layout_fragment_network.xml.flat",
+        "source": "com.rammonitor.app-main-45:/layout/fragment_network.xml"
+    },
+    {
+        "merged": "/Users/gorkangonuldas/.gradle/daemon/8.7/com.rammonitor.app-debug-43:/layout_activity_main.xml.flat",
+        "source": "/Users/gorkangonuldas/.gradle/daemon/8.7/com.rammonitor.app-main-45:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/gorkangonuldas/.gradle/daemon/8.7/com.rammonitor.app-debug-43:/layout_item_network_usage.xml.flat",
+        "source": "/Users/gorkangonuldas/.gradle/daemon/8.7/com.rammonitor.app-main-45:/layout/item_network_usage.xml"
+    },
+    {
+        "merged": "/Users/gorkangonuldas/.gradle/daemon/8.7/com.rammonitor.app-debug-43:/layout_fragment_app_list.xml.flat",
+        "source": "/Users/gorkangonuldas/.gradle/daemon/8.7/com.rammonitor.app-main-45:/layout/fragment_app_list.xml"
+    },
+    {
+        "merged": "/Users/gorkangonuldas/.gradle/daemon/8.7/com.rammonitor.app-debug-43:/layout_fragment_network.xml.flat",
+        "source": "/Users/gorkangonuldas/.gradle/daemon/8.7/com.rammonitor.app-main-45:/layout/fragment_network.xml"
+    },
+    {
+        "merged": "/Users/gorkangonuldas/.gradle/daemon/8.7/com.rammonitor.app-debug-43:/drawable_ic_warning.xml.flat",
+        "source": "/Users/gorkangonuldas/.gradle/daemon/8.7/com.rammonitor.app-main-45:/drawable/ic_warning.xml"
+    },
+    {
+        "merged": "/Users/gorkangonuldas/.gradle/daemon/8.7/com.rammonitor.app-debug-43:/drawable_card_bg.xml.flat",
+        "source": "/Users/gorkangonuldas/.gradle/daemon/8.7/com.rammonitor.app-main-45:/drawable/card_bg.xml"
+    },
+    {
+        "merged": "/Users/gorkangonuldas/.gradle/daemon/8.7/com.rammonitor.app-debug-43:/drawable_rank_bg.xml.flat",
+        "source": "/Users/gorkangonuldas/.gradle/daemon/8.7/com.rammonitor.app-main-45:/drawable/rank_bg.xml"
+    },
+    {
+        "merged": "com.rammonitor.app-debug-43:/layout_item_live_traffic.xml.flat",
+        "source": "com.rammonitor.app-main-45:/layout/item_live_traffic.xml"
+    },
+    {
+        "merged": "/Users/gorkangonuldas/.gradle/daemon/8.7/com.rammonitor.app-debug-43:/drawable_ic_stop.xml.flat",
+        "source": "/Users/gorkangonuldas/.gradle/daemon/8.7/com.rammonitor.app-main-45:/drawable/ic_stop.xml"
+    },
+    {
+        "merged": "/Users/gorkangonuldas/.gradle/daemon/8.7/com.rammonitor.app-debug-43:/layout_fragment_dashboard.xml.flat",
+        "source": "/Users/gorkangonuldas/.gradle/daemon/8.7/com.rammonitor.app-main-45:/layout/fragment_dashboard.xml"
+    }
+]

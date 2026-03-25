@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "/Users/gorkangonuldas/.gradle/daemon/8.7/com.rammonitor.app-mergeDebugResources-42:/layout/activity_main.xml",
+        "source": "/Users/gorkangonuldas/.gradle/daemon/8.7/com.rammonitor.app-main-45:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/gorkangonuldas/.gradle/daemon/8.7/com.rammonitor.app-mergeDebugResources-42:/layout/fragment_history.xml",
+        "source": "/Users/gorkangonuldas/.gradle/daemon/8.7/com.rammonitor.app-main-45:/layout/fragment_history.xml"
+    },
+    {
+        "merged": "/Users/gorkangonuldas/.gradle/daemon/8.7/com.rammonitor.app-mergeDebugResources-42:/layout/item_app_mem.xml",
+        "source": "/Users/gorkangonuldas/.gradle/daemon/8.7/com.rammonitor.app-main-45:/layout/item_app_mem.xml"
+    },
+    {
+        "merged": "com.rammonitor.app-mergeDebugResources-42:/layout/fragment_network.xml",
+        "source": "com.rammonitor.app-main-45:/layout/fragment_network.xml"
+    },
+    {
+        "merged": "/Users/gorkangonuldas/.gradle/daemon/8.7/com.rammonitor.app-mergeDebugResources-42:/layout/fragment_network.xml",
+        "source": "/Users/gorkangonuldas/.gradle/daemon/8.7/com.rammonitor.app-main-45:/layout/fragment_network.xml"
+    },
+    {
+        "merged": "/Users/gorkangonuldas/.gradle/daemon/8.7/com.rammonitor.app-mergeDebugResources-42:/layout/fragment_app_list.xml",
+        "source": "/Users/gorkangonuldas/.gradle/daemon/8.7/com.rammonitor.app-main-45:/layout/fragment_app_list.xml"
+    },
+    {
+        "merged": "com.rammonitor.app-mergeDebugResources-42:/layout/item_live_traffic.xml",
+        "source": "com.rammonitor.app-main-45:/layout/item_live_traffic.xml"
+    },
+    {
+        "merged": "/Users/gorkangonuldas/.gradle/daemon/8.7/com.rammonitor.app-mergeDebugResources-42:/layout/item_network_usage.xml",
+        "source": "/Users/gorkangonuldas/.gradle/daemon/8.7/com.rammonitor.app-main-45:/layout/item_network_usage.xml"
+    },
+    {
+        "merged": "/Users/gorkangonuldas/.gradle/daemon/8.7/com.rammonitor.app-mergeDebugResources-42:/layout/fragment_dashboard.xml",
+        "source": "/Users/gorkangonuldas/.gradle/daemon/8.7/com.rammonitor.app-main-45:/layout/fragment_dashboard.xml"
+    }
+]

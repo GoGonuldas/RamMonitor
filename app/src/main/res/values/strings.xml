@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RAM Monitor</string>
+    <string name="tab_dashboard">Anlık</string>
+    <string name="tab_apps">Uygulamalar</string>
+    <string name="tab_history">Geçmiş</string>
+    <string name="perm_title">Uygulama Listesi için İzin Gerekli</string>
+    <string name="perm_desc">YouTube ve diğer uygulamaların RAM kullanımını görmek için
+        \"Kullanım Erişimi\" iznini vermeniz gerekiyor.\n\nBu izin Android 8+ cihazlarda zorunludur.</string>
+    <string name="perm_button">⚙  Kullanım Erişimi Ver</string>
+    <string name="perm_steps">Ayarlar → Uygulamalar → Özel Uygulama Erişimi\n→ Kullanım Erişimi → RAM Monitor → Etkinleştir</string>
+    <string name="apps_info_limited">Bazi uygulamalarda RAM degeri Android kisitlari nedeniyle okunamayabilir.</string>
+    <string name="apps_filter_known_only">Sadece RAM verisi olanlari goster</string>
+    <string name="apps_count_with_unknown">%1$d uygulama (RAM bilinmiyor: %2$d)</string>
+    <string name="apps_unknown_ram">RAM: —</string>
+    <string name="apps_unknown_ram_reason">Android kisiti</string>
+    <string name="apps_ram_value">RAM: %1$.1f MB</string>
+    <string name="apps_uss_value">USS: %1$.1f MB</string>
+    <string name="network_info">Son 24 saatte uygulamaların kullandığı ağ verisi gösterilmektedir.</string>
+    <string name="network_empty">Ağ verisi bulunamadı.</string>
+    <string name="network_perm_title">Ağ Kullanımı için İzin Gerekli</string>
+    <string name="network_perm_desc">Uygulamaların ağ kullanımını görmek için \"Kullanım Erişimi\" iznini vermeniz gerekiyor.\n\nAyarlar → Uygulamalar → Özel Uygulama Erişimi → Kullanım Erişimi → RAM Monitor → Etkinleştir</string>
+    <string name="network_count">%1$d uygulama</string>
+    <string name="network_total_mb">Toplam: %1$.1f MB</string>
+    <string name="network_rx_mb">↓ %1$.1f MB</string>
+    <string name="network_tx_mb">↑ %1$.1f MB</string>
+    <string name="live_traffic_empty">Şu an aktif ağ trafiği yok.\nUygulamalar veri alışverişi yaptığında burada görünür.</string>
+</resources>

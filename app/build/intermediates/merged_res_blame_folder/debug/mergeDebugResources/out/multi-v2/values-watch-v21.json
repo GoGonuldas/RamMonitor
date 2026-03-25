@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.rammonitor.app-mergeDebugResources-41:/values-watch-v21/values-watch-v21.xml",
+            "map": [
+                {
+                    "source": "/Users/gorkangonuldas/.gradle/caches/transforms-4/3e6ead8dc34d07e9f354e5b562bd2ed8/transformed/appcompat-1.6.1/res/values-watch-v21/values-watch-v21.xml",
+                    "from": {
+                        "startLines": "2,6,10",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,271,499",
+                        "endLines": "5,9,13",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "266,494,724"
+                    }
+                }
+            ]
+        }
+    ]
+}

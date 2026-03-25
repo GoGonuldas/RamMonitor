@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "com.rammonitor.app-merged_res-43:/layout_item_app_mem.xml.flat",
+        "source": "com.rammonitor.app-main-45:/layout/item_app_mem.xml"
+    },
+    {
+        "merged": "com.rammonitor.app-merged_res-43:/layout_fragment_dashboard.xml.flat",
+        "source": "com.rammonitor.app-main-45:/layout/fragment_dashboard.xml"
+    },
+    {
+        "merged": "com.rammonitor.app-merged_res-43:/drawable_ic_memory.xml.flat",
+        "source": "com.rammonitor.app-main-45:/drawable/ic_memory.xml"
+    },
+    {
+        "merged": "com.rammonitor.app-merged_res-43:/drawable_ic_stop.xml.flat",
+        "source": "com.rammonitor.app-main-45:/drawable/ic_stop.xml"
+    },
+    {
+        "merged": "com.rammonitor.app-merged_res-43:/drawable_card_bg.xml.flat",
+        "source": "com.rammonitor.app-main-45:/drawable/card_bg.xml"
+    },
+    {
+        "merged": "com.rammonitor.app-merged_res-43:/drawable_ic_warning.xml.flat",
+        "source": "com.rammonitor.app-main-45:/drawable/ic_warning.xml"
+    },
+    {
+        "merged": "com.rammonitor.app-merged_res-43:/drawable_dot_green.xml.flat",
+        "source": "com.rammonitor.app-main-45:/drawable/dot_green.xml"
+    },
+    {
+        "merged": "com.rammonitor.app-merged_res-43:/layout_activity_main.xml.flat",
+        "source": "com.rammonitor.app-main-45:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.rammonitor.app-merged_res-43:/layout_fragment_history.xml.flat",
+        "source": "com.rammonitor.app-main-45:/layout/fragment_history.xml"
+    },
+    {
+        "merged": "com.rammonitor.app-merged_res-43:/layout_fragment_app_list.xml.flat",
+        "source": "com.rammonitor.app-main-45:/layout/fragment_app_list.xml"
+    },
+    {
+        "merged": "com.rammonitor.app-merged_res-43:/drawable_rank_bg.xml.flat",
+        "source": "com.rammonitor.app-main-45:/drawable/rank_bg.xml"
+    }
+]

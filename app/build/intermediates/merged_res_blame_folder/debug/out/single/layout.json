@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "com.rammonitor.app-mergeDebugResources-42:/layout/fragment_app_list.xml",
+        "source": "com.rammonitor.app-main-45:/layout/fragment_app_list.xml"
+    },
+    {
+        "merged": "com.rammonitor.app-mergeDebugResources-42:/layout/fragment_dashboard.xml",
+        "source": "com.rammonitor.app-main-45:/layout/fragment_dashboard.xml"
+    },
+    {
+        "merged": "com.rammonitor.app-mergeDebugResources-42:/layout/item_app_mem.xml",
+        "source": "com.rammonitor.app-main-45:/layout/item_app_mem.xml"
+    },
+    {
+        "merged": "com.rammonitor.app-mergeDebugResources-42:/layout/fragment_history.xml",
+        "source": "com.rammonitor.app-main-45:/layout/fragment_history.xml"
+    },
+    {
+        "merged": "com.rammonitor.app-mergeDebugResources-42:/layout/activity_main.xml",
+        "source": "com.rammonitor.app-main-45:/layout/activity_main.xml"
+    }
+]

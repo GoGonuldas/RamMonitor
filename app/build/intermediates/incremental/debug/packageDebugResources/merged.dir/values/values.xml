@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent_cyan">#00E5FF</color>
+    <color name="accent_green">#4CAF50</color>
+    <color name="accent_orange">#FF9800</color>
+    <color name="accent_red">#F44336</color>
+    <color name="bg_dark">#0D0D1A</color>
+    <color name="card_dark">#1A1A2E</color>
+    <color name="surface_dark">#12122A</color>
+    <color name="text_primary">#E8E8F0</color>
+    <color name="text_secondary">#6B6B8A</color>
+    <color name="white">#FFFFFF</color>
+    <string name="app_name">RAM Monitor</string>
+    <string name="apps_count_with_unknown">%1$d uygulama (RAM bilinmiyor: %2$d)</string>
+    <string name="apps_filter_known_only">Sadece RAM verisi olanlari goster</string>
+    <string name="apps_info_limited">Bazi uygulamalarda RAM degeri Android kisitlari nedeniyle okunamayabilir.</string>
+    <string name="apps_ram_value">RAM: %1$.1f MB</string>
+    <string name="apps_unknown_ram">RAM: —</string>
+    <string name="apps_unknown_ram_reason">Android kisiti</string>
+    <string name="apps_uss_value">USS: %1$.1f MB</string>
+    <string name="live_traffic_empty">Şu an aktif ağ trafiği yok.\nUygulamalar veri alışverişi yaptığında burada görünür.</string>
+    <string name="network_count">%1$d uygulama</string>
+    <string name="network_empty">Ağ verisi bulunamadı.</string>
+    <string name="network_info">Son 24 saatte uygulamaların kullandığı ağ verisi gösterilmektedir.</string>
+    <string name="network_perm_desc">Uygulamaların ağ kullanımını görmek için \"Kullanım Erişimi\" iznini vermeniz gerekiyor.\n\nAyarlar → Uygulamalar → Özel Uygulama Erişimi → Kullanım Erişimi → RAM Monitor → Etkinleştir</string>
+    <string name="network_perm_title">Ağ Kullanımı için İzin Gerekli</string>
+    <string name="network_rx_mb">↓ %1$.1f MB</string>
+    <string name="network_total_mb">Toplam: %1$.1f MB</string>
+    <string name="network_tx_mb">↑ %1$.1f MB</string>
+    <string name="perm_button">⚙  Kullanım Erişimi Ver</string>
+    <string name="perm_desc">YouTube ve diğer uygulamaların RAM kullanımını görmek için
+        \"Kullanım Erişimi\" iznini vermeniz gerekiyor.\n\nBu izin Android 8+ cihazlarda zorunludur.</string>
+    <string name="perm_steps">Ayarlar → Uygulamalar → Özel Uygulama Erişimi\n→ Kullanım Erişimi → RAM Monitor → Etkinleştir</string>
+    <string name="perm_title">Uygulama Listesi için İzin Gerekli</string>
+    <string name="tab_apps">Uygulamalar</string>
+    <string name="tab_dashboard">Anlık</string>
+    <string name="tab_history">Geçmiş</string>
+    <style name="Theme.RamMonitor" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/accent_cyan</item>
+        <item name="colorPrimaryVariant">@color/surface_dark</item>
+        <item name="colorOnPrimary">@color/bg_dark</item>
+        <item name="colorSurface">@color/surface_dark</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="android:windowBackground">@color/bg_dark</item>
+        <item name="android:statusBarColor">@color/surface_dark</item>
+        <item name="android:navigationBarColor">@color/bg_dark</item>
+    </style>
+</resources>
