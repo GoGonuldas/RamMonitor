@@ -13,3 +13,4 @@ local.properties
 .externalNativeBuild
 .cxx
 /.idea/vcs.xml
+app/build/

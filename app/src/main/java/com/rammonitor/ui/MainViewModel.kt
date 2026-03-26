@@ -118,6 +118,7 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
         viewModelScope.launch(Dispatchers.IO) {
             val info = repo.getRamInfo()
             _ramInfo.postValue(info)
+            repo.saveSnapshot(info)  // ← Save to history database
         }
     }
 

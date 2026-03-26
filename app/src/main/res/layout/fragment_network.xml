@@ -111,8 +111,13 @@
                 android:layout_width="0dp"
                 android:layout_height="36dp"
                 android:layout_weight="1"
-                android:text="🔴 Canlı Trafik"
-                android:textSize="12sp"
+                android:text="🔴 Canlı"
+                android:textSize="11sp"
+                android:textAllCaps="false"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
                 android:textColor="#000000"
                 android:backgroundTint="@color/accent_cyan" />
 
@@ -122,7 +127,12 @@
                 android:layout_height="36dp"
                 android:layout_weight="1"
                 android:text="📊 24 Saat"
-                android:textSize="12sp"
+                android:textSize="11sp"
+                android:textAllCaps="false"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
                 android:textColor="@color/text_secondary"
                 android:backgroundTint="@color/surface_dark" />
         </LinearLayout>

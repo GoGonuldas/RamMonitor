@@ -44,10 +44,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/surface_dark"
+        app:tabMode="fixed"
+        app:tabGravity="fill"
         app:tabTextColor="@color/text_secondary"
         app:tabSelectedTextColor="@color/accent_cyan"
         app:tabIndicatorColor="@color/accent_cyan"
-        app:tabIndicatorHeight="3dp" />
+        app:tabIndicatorHeight="3dp"
+        app:tabTextAppearance="@style/SmallTabText"
+        app:tabInlineLabel="true" />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
