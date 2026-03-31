@@ -28,7 +28,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="MİN"
+                    android:text="@string/history_min_short"
                     android:textColor="@color/text_secondary"
                     android:textSize="10sp"
                     android:letterSpacing="0.1"/>
@@ -54,7 +54,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="ORT"
+                    android:text="@string/history_avg_short"
                     android:textColor="@color/text_secondary"
                     android:textSize="10sp"
                     android:letterSpacing="0.1"/>
@@ -79,7 +79,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="MAKS"
+                    android:text="@string/history_max_short"
                     android:textColor="@color/text_secondary"
                     android:textSize="10sp"
                     android:letterSpacing="0.1"/>
@@ -107,7 +107,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="SON 1 SAAT"
+                android:text="@string/history_last_hour_title"
                 android:textColor="@color/text_secondary"
                 android:textSize="10sp"
                 android:letterSpacing="0.1"
@@ -117,7 +117,7 @@
                 android:id="@+id/tvAvgHour"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ortalama: --"
+                android:text="@string/history_avg_placeholder"
                 android:textColor="@color/text_primary"
                 android:textSize="14sp"/>
 
@@ -125,7 +125,7 @@
                 android:id="@+id/tvPeakHour"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tepe: --"
+                android:text="@string/history_peak_placeholder"
                 android:textColor="#FF9800"
                 android:textSize="14sp"
                 android:layout_marginTop="4dp"/>
@@ -134,7 +134,7 @@
                 android:id="@+id/tvSamples"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-- ölçüm"
+                android:text="@string/history_samples_placeholder"
                 android:textColor="@color/text_secondary"
                 android:textSize="12sp"
                 android:layout_marginTop="4dp"/>
@@ -151,7 +151,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="GEÇMİŞ GRAFİĞİ"
+                android:text="@string/history_chart_title"
                 android:textColor="@color/text_secondary"
                 android:textSize="10sp"
                 android:letterSpacing="0.1"

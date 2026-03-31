@@ -19,7 +19,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="RAM Monitor"
+            android:text="@string/app_name"
             android:textColor="@color/text_primary"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -34,7 +34,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" Aktif"
+            android:text="@string/header_status_active"
             android:textColor="#4CAF50"
             android:textSize="12sp" />
     </LinearLayout>

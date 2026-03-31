@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RAM Monitor</string>
+    <string name="tab_dashboard">Anlık</string>
+    <string name="tab_apps">Uygulamalar</string>
+    <string name="tab_history">Geçmiş</string>
+    <string name="tab_dashboard_icon">📊 Anlık</string>
+    <string name="tab_apps_icon">📱 Uygulamalar</string>
+    <string name="tab_history_icon">📈 Geçmiş</string>
+    <string name="tab_network_icon">🌐 Ağ</string>
+
+    <string name="perm_title">Uygulama Listesi için İzin Gerekli</string>
+    <string name="perm_desc">YouTube ve diğer uygulamaların RAM kullanımını görmek için \"Kullanım Erişimi\" iznini vermeniz gerekiyor.\n\nBu izin Android 8+ cihazlarda zorunludur.</string>
+    <string name="perm_button">⚙ Kullanım Erişimi Ver</string>
+    <string name="perm_steps">Ayarlar → Uygulamalar → Özel Uygulama Erişimi\n→ Kullanım Erişimi → RAM Monitor → Etkinleştir</string>
+
+    <string name="apps_info_limited">Bazı uygulamalarda RAM değeri Android kısıtları nedeniyle okunamayabilir.</string>
+    <string name="apps_filter_known_only">Sadece RAM verisi olanları göster</string>
+    <string name="apps_count_with_unknown">%1$d uygulama (RAM bilinmiyor: %2$d)</string>
+    <string name="apps_unknown_ram">RAM: —</string>
+    <string name="apps_unknown_ram_reason">Android kısıtı</string>
+    <string name="apps_ram_value">RAM: %1$.1f MB</string>
+    <string name="apps_uss_value">USS: %1$.1f MB</string>
+    <string name="app_list_loading">Yükleniyor…</string>
+
+    <string name="network_info">Son 24 saatte uygulamaların kullandığı ağ verisi gösterilmektedir.</string>
+    <string name="network_empty">Ağ verisi bulunamadı.</string>
+    <string name="network_perm_title">Ağ Kullanımı için İzin Gerekli</string>
+    <string name="network_perm_desc">Uygulamaların ağ kullanımını görmek için \"Kullanım Erişimi\" iznini vermeniz gerekiyor.\n\nAyarlar → Uygulamalar → Özel Uygulama Erişimi → Kullanım Erişimi → RAM Monitor → Etkinleştir</string>
+    <string name="network_count">%1$d uygulama</string>
+    <string name="network_count_zero">0 uygulama</string>
+    <string name="network_total_mb">Toplam: %1$.1f MB</string>
+    <string name="network_rx_mb">↓ %1$.1f MB</string>
+    <string name="network_tx_mb">↑ %1$.1f MB</string>
+    <string name="live_traffic_empty">Şu an aktif ağ trafiği yok.\nUygulamalar veri alışverişi yaptığında burada görünür.</string>
+    <string name="network_download_title">İNDİRME</string>
+    <string name="network_upload_title">YÜKLEME</string>
+    <string name="network_tab_live">🔴 Canlı</string>
+    <string name="network_tab_24h">📊 24 Saat</string>
+    <string name="network_speed_mb_s">%1$.1f MB/s</string>
+    <string name="network_speed_kb_s">%1$.1f KB/s</string>
+    <string name="network_speed_b_s">%1$d B/s</string>
+    <string name="network_rx_speed">↓ %1$s</string>
+    <string name="network_tx_speed">↑ %1$s</string>
+
+    <string name="header_status_active">Aktif</string>
+    <string name="dashboard_usage_title">KULLANIM</string>
+    <string name="dashboard_used_placeholder">Kullanılan: -- MB</string>
+    <string name="dashboard_free_placeholder">Boş: -- MB</string>
+    <string name="dashboard_live_chart_title">CANLI GRAFİK (Son 60 ölçüm)</string>
+    <string name="dashboard_usage_percent">%1$.1f%%</string>
+    <string name="dashboard_used_ram">Kullanılan: %1$.0f MB / %2$.0f MB</string>
+    <string name="dashboard_free_ram">Boş: %1$.0f MB</string>
+
+    <string name="history_min_short">MİN</string>
+    <string name="history_avg_short">ORT</string>
+    <string name="history_max_short">MAKS</string>
+    <string name="history_last_hour_title">SON 1 SAAT</string>
+    <string name="history_avg_placeholder">Ortalama: --</string>
+    <string name="history_peak_placeholder">Tepe: --</string>
+    <string name="history_samples_placeholder">-- ölçüm</string>
+    <string name="history_chart_title">GEÇMİŞ GRAFİĞİ</string>
+    <string name="history_min_value">Min: %1$.1f%%</string>
+    <string name="history_max_value">Maks: %1$.1f%%</string>
+    <string name="history_avg_value">Ort: %1$.1f%%</string>
+    <string name="history_samples_count">%1$d ölçüm</string>
+    <string name="history_last_hour_avg">Son 1 saat ort: %1$.1f%%</string>
+    <string name="history_last_hour_peak">Son 1 saat tepe: %1$.1f%%</string>
+
+    <string name="usage_dialog_title">Uygulama Erişimi Gerekli</string>
+    <string name="usage_dialog_message">Diğer uygulamaların RAM kullanımını görebilmek için \"Kullanım Erişimi\" iznini vermeniz gerekiyor.\n\nAyarlar → Uygulamalar → Özel Uygulama Erişimi → Kullanım Erişimi → RAM Monitor → Etkinleştir</string>
+    <string name="usage_dialog_open_settings">Ayarlara Git</string>
+    <string name="usage_dialog_later">Sonra</string>
+
+    <string name="chart_ram_percent_label">RAM %%</string>
+    <string name="common_refresh">Yenile</string>
+
+    <string name="service_monitoring">RAM izleniyor…</string>
+    <string name="service_notification_text">RAM: %1$.1f%% — %2$.0f / %3$.0f MB</string>
+    <string name="service_title">RAM Monitor</string>
+    <string name="service_stop">Durdur</string>
+    <string name="service_alert_title">⚠️ Yüksek RAM Kullanımı!</string>
+    <string name="service_alert_text">RAM kullanımı %1$.1f%%\'e ulaştı</string>
+    <string name="service_channel_name">RAM Monitor</string>
+    <string name="service_channel_desc">Anlık RAM kullanım bildirimleri</string>
+</resources>
+
+

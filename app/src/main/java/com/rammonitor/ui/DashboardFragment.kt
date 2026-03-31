@@ -13,6 +13,7 @@ import androidx.lifecycle.repeatOnLifecycle
 import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.*
 import com.github.mikephil.charting.formatter.ValueFormatter
+import com.rammonitor.R
 import com.rammonitor.databinding.FragmentDashboardBinding
 import java.text.SimpleDateFormat
 import java.util.*
@@ -70,9 +71,9 @@ class DashboardFragment : Fragment() {
     private fun observeData() {
         vm.ramInfo.observe(viewLifecycleOwner) { info ->
             val pct = info.usagePercent
-            binding.tvUsagePercent.text = "%.1f%%".format(pct)
-            binding.tvUsedRam.text = "Kullanılan: %.0f MB / %.0f MB".format(info.usedMb, info.totalMb)
-            binding.tvFreeRam.text = "Boş: %.0f MB".format(info.availableMb)
+            binding.tvUsagePercent.text = getString(R.string.dashboard_usage_percent, pct)
+            binding.tvUsedRam.text = getString(R.string.dashboard_used_ram, info.usedMb, info.totalMb)
+            binding.tvFreeRam.text = getString(R.string.dashboard_free_ram, info.availableMb)
 
             // Color coding
             val color = when {
@@ -93,7 +94,7 @@ class DashboardFragment : Fragment() {
                     val entries = history.takeLast(60).map { entry ->
                         Entry(entry.timestamp.toFloat(), entry.usagePercent)
                     }
-                    val dataSet = LineDataSet(entries, "RAM %").apply {
+                    val dataSet = LineDataSet(entries, getString(R.string.chart_ram_percent_label)).apply {
                         color = Color.parseColor("#00E5FF")
                         setDrawCircles(false)
                         lineWidth = 2f

@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.google.android.material.tabs.TabLayoutMediator
+import com.rammonitor.R
 import com.rammonitor.databinding.ActivityMainBinding
 import com.rammonitor.service.RamMonitorService
 import androidx.core.content.ContextCompat
@@ -44,19 +45,14 @@ class MainActivity : AppCompatActivity() {
     private fun promptUsageStatsIfNeeded() {
         if (!viewModel.hasUsageStatsPermission()) {
             AlertDialog.Builder(this)
-                .setTitle("Uygulama Erişimi Gerekli")
-                .setMessage(
-                    "Diğer uygulamaların RAM kullanımını görebilmek için " +
-                    "\"Kullanım Erişimi\" iznini vermeniz gerekiyor.\n\n" +
-                    "Ayarlar → Uygulamalar → Özel Uygulama Erişimi → " +
-                    "Kullanım Erişimi → RAM Monitor → Etkinleştir"
-                )
-                .setPositiveButton("Ayarlara Git") { _, _ ->
+                .setTitle(getString(R.string.usage_dialog_title))
+                .setMessage(getString(R.string.usage_dialog_message))
+                .setPositiveButton(getString(R.string.usage_dialog_open_settings)) { _, _ ->
                     startActivity(
                         Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS)
                     )
                 }
-                .setNegativeButton("Sonra", null)
+                .setNegativeButton(getString(R.string.usage_dialog_later), null)
                 .show()
         }
     }
@@ -74,10 +70,10 @@ class MainActivity : AppCompatActivity() {
         binding.viewPager.adapter = adapter
         TabLayoutMediator(binding.tabLayout, binding.viewPager) { tab, pos ->
             tab.text = when (pos) {
-                0 -> "📊 Anlık"
-                1 -> "📱 Uygulamalar"
-                2 -> "📈 Geçmiş"
-                else -> "🌐 Ağ"
+                0 -> getString(R.string.tab_dashboard_icon)
+                1 -> getString(R.string.tab_apps_icon)
+                2 -> getString(R.string.tab_history_icon)
+                else -> getString(R.string.tab_network_icon)
             }
         }.attach()
     }

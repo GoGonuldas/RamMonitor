@@ -120,9 +120,9 @@ class NetworkFragment : Fragment() {
     }
 
     private fun formatSpeed(bytesPerSec: Long): String = when {
-        bytesPerSec >= 1024 * 1024 -> "%.1f MB/s".format(bytesPerSec / 1024f / 1024f)
-        bytesPerSec >= 1024        -> "%.1f KB/s".format(bytesPerSec / 1024f)
-        else                       -> "${bytesPerSec} B/s"
+        bytesPerSec >= 1024 * 1024 -> getString(R.string.network_speed_mb_s, bytesPerSec / 1024f / 1024f)
+        bytesPerSec >= 1024        -> getString(R.string.network_speed_kb_s, bytesPerSec / 1024f)
+        else                       -> getString(R.string.network_speed_b_s, bytesPerSec)
     }
 
     override fun onDestroyView() {
@@ -170,10 +170,11 @@ class LiveTrafficAdapter : RecyclerView.Adapter<LiveTrafficAdapter.VH>() {
 
     override fun onBindViewHolder(holder: VH, position: Int) {
         val item = items[position]; val b = holder.binding
+        val ctx = b.root.context
         b.tvAppName.text = item.appName
         b.tvPackage.text = item.packageName
         b.tvTotalSpeed.text = item.totalSpeedLabel
-        b.tvRxSpeed.text = "↓ ${item.rxSpeedLabel}"
-        b.tvTxSpeed.text = "↑ ${item.txSpeedLabel}"
+        b.tvRxSpeed.text = ctx.getString(R.string.network_rx_speed, item.rxSpeedLabel)
+        b.tvTxSpeed.text = ctx.getString(R.string.network_tx_speed, item.txSpeedLabel)
     }
 }

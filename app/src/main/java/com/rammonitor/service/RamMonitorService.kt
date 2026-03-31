@@ -36,7 +36,7 @@ class RamMonitorService : Service() {
             stopSelf()
             return START_NOT_STICKY
         }
-        startForeground(NOTIF_ID, buildNotification("RAM izleniyor…", 0f))
+        startForeground(NOTIF_ID, buildNotification(getString(R.string.service_monitoring), 0f))
         startMonitoring()
         return START_STICKY
     }
@@ -60,7 +60,7 @@ class RamMonitorService : Service() {
     private fun updateNotification(percent: Float, usedMb: Float, totalMb: Float) {
         val nm = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
         nm.notify(NOTIF_ID, buildNotification(
-            "RAM: %.1f%% — %.0f / %.0f MB".format(percent, usedMb, totalMb),
+            getString(R.string.service_notification_text, percent, usedMb, totalMb),
             percent
         ))
     }
@@ -77,11 +77,11 @@ class RamMonitorService : Service() {
             PendingIntent.FLAG_IMMUTABLE
         )
         return NotificationCompat.Builder(this, CHANNEL_ID)
-            .setContentTitle("RAM Monitor")
+            .setContentTitle(getString(R.string.service_title))
             .setContentText(text)
             .setSmallIcon(R.drawable.ic_memory)
             .setContentIntent(openIntent)
-            .addAction(R.drawable.ic_stop, "Durdur", stopIntent)
+            .addAction(R.drawable.ic_stop, getString(R.string.service_stop), stopIntent)
             .setOngoing(true)
             .setProgress(100, percent.toInt(), false)
             .setOnlyAlertOnce(true)
@@ -99,8 +99,8 @@ class RamMonitorService : Service() {
     private fun sendAlertNotification(percent: Float) {
         val nm = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
         val notif = NotificationCompat.Builder(this, CHANNEL_ID)
-            .setContentTitle("⚠️ Yüksek RAM Kullanımı!")
-            .setContentText("RAM kullanımı %.1f%%'e ulaştı".format(percent))
+            .setContentTitle(getString(R.string.service_alert_title))
+            .setContentText(getString(R.string.service_alert_text, percent))
             .setSmallIcon(R.drawable.ic_warning)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
             .setAutoCancel(true)
@@ -111,10 +111,10 @@ class RamMonitorService : Service() {
     private fun createNotificationChannel() {
         val channel = NotificationChannel(
             CHANNEL_ID,
-            "RAM Monitor",
+            getString(R.string.service_channel_name),
             NotificationManager.IMPORTANCE_LOW
         ).apply {
-            description = "Anlık RAM kullanım bildirimleri"
+            description = getString(R.string.service_channel_desc)
         }
         val nm = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
         nm.createNotificationChannel(channel)

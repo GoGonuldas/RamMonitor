@@ -32,7 +32,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="İNDİRME"
+                    android:text="@string/network_download_title"
                     android:textColor="@color/text_secondary"
                     android:textSize="10sp"
                     android:letterSpacing="0.1" />
@@ -71,7 +71,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="YÜKLEME"
+                    android:text="@string/network_upload_title"
                     android:textColor="@color/text_secondary"
                     android:textSize="10sp"
                     android:letterSpacing="0.1" />
@@ -111,7 +111,7 @@
                 android:layout_width="0dp"
                 android:layout_height="36dp"
                 android:layout_weight="1"
-                android:text="🔴 Canlı"
+                android:text="@string/network_tab_live"
                 android:textSize="11sp"
                 android:textAllCaps="false"
                 android:singleLine="true"
@@ -126,7 +126,7 @@
                 android:layout_width="0dp"
                 android:layout_height="36dp"
                 android:layout_weight="1"
-                android:text="📊 24 Saat"
+                android:text="@string/network_tab_24h"
                 android:textSize="11sp"
                 android:textAllCaps="false"
                 android:singleLine="true"
@@ -188,7 +188,7 @@
                     android:layout_weight="1"
                     android:textColor="@color/text_secondary"
                     android:textSize="13sp"
-                    android:text="0 uygulama" />
+                    android:text="@string/network_count_zero" />
 
                 <ProgressBar
                     android:id="@+id/progressBar"
@@ -201,7 +201,7 @@
                     android:id="@+id/btnRefresh"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Yenile"
+                    android:text="@string/common_refresh"
                     android:textSize="12sp"
                     android:backgroundTint="@color/accent_cyan"
                     android:textColor="#000000" />

@@ -11,6 +11,7 @@ import androidx.lifecycle.repeatOnLifecycle
 import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.*
 import com.github.mikephil.charting.formatter.ValueFormatter
+import com.rammonitor.R
 import com.rammonitor.databinding.FragmentHistoryBinding
 import java.text.SimpleDateFormat
 import java.util.*
@@ -80,7 +81,7 @@ class HistoryFragment : Fragment() {
                             else -> Color.parseColor("#F44336")
                         }
                     }
-                    val dataSet = BarDataSet(entries, "RAM %").apply {
+                    val dataSet = BarDataSet(entries, getString(R.string.chart_ram_percent_label)).apply {
                         setColors(*colors.toIntArray())
                         valueTextColor = Color.TRANSPARENT
                         valueTextSize = 0f
@@ -91,20 +92,20 @@ class HistoryFragment : Fragment() {
 
                     // Summary stats
                     val usages = history.map { it.usagePercent }
-                    binding.tvMin.text = "Min: %.1f%%".format(usages.minOrNull() ?: 0f)
-                    binding.tvMax.text = "Maks: %.1f%%".format(usages.maxOrNull() ?: 0f)
-                    binding.tvAvg.text = "Ort: %.1f%%".format(usages.average().toFloat())
-                    binding.tvSamples.text = "${history.size} ölçüm"
+                    binding.tvMin.text = getString(R.string.history_min_value, usages.minOrNull() ?: 0f)
+                    binding.tvMax.text = getString(R.string.history_max_value, usages.maxOrNull() ?: 0f)
+                    binding.tvAvg.text = getString(R.string.history_avg_value, usages.average().toFloat())
+                    binding.tvSamples.text = getString(R.string.history_samples_count, history.size)
                 }
             }
         }
 
         vm.avgUsage.observe(viewLifecycleOwner) { avg ->
-            binding.tvAvgHour.text = "Son 1 saat ort: %.1f%%".format(avg)
+            binding.tvAvgHour.text = getString(R.string.history_last_hour_avg, avg)
         }
 
         vm.peakUsage.observe(viewLifecycleOwner) { peak ->
-            binding.tvPeakHour.text = "Son 1 saat tepe: %.1f%%".format(peak)
+            binding.tvPeakHour.text = getString(R.string.history_last_hour_peak, peak)
         }
     }
 

@@ -85,3 +85,4 @@
     <string name="service_channel_name">RAM Monitor</string>
     <string name="service_channel_desc">Live RAM usage notifications</string>
 </resources>
+
