@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gizlilik Politikası — RAM Monitor</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0b1120;
+            color: #d0e4f7;
+            line-height: 1.7;
+            padding: 32px 16px;
+        }
+        .container { max-width: 780px; margin: 0 auto; }
+        h1 { font-size: 2rem; color: #00e5ff; margin-bottom: 6px; }
+        .subtitle { color: #7a9cbe; font-size: 0.95rem; margin-bottom: 36px; }
+        h2 { font-size: 1.25rem; color: #00e5ff; margin: 36px 0 12px; border-left: 4px solid #00e5ff; padding-left: 12px; }
+        h3 { font-size: 1.05rem; color: #90caf9; margin: 24px 0 8px; }
+        p, li { color: #b8cfe8; font-size: 0.97rem; margin-bottom: 8px; }
+        ul { padding-left: 20px; margin-bottom: 12px; }
+        table { width: 100%; border-collapse: collapse; margin: 12px 0 24px; }
+        th { background: #132236; color: #00e5ff; text-align: left; padding: 10px 14px; font-size: 0.9rem; }
+        td { padding: 10px 14px; border-bottom: 1px solid #1e3a54; font-size: 0.9rem; color: #b8cfe8; }
+        tr:last-child td { border-bottom: none; }
+        code { background: #132236; color: #00e5ff; padding: 2px 7px; border-radius: 4px; font-size: 0.88rem; }
+        .badge { display: inline-block; background: #0e2a3d; color: #4dd0e1; border: 1px solid #00e5ff; border-radius: 20px; padding: 4px 14px; font-size: 0.82rem; margin-bottom: 28px; }
+        .lang-switch { display: flex; gap: 10px; margin-bottom: 32px; }
+        .lang-switch a { color: #00e5ff; text-decoration: none; border: 1px solid #00e5ff; border-radius: 20px; padding: 5px 16px; font-size: 0.85rem; }
+        .lang-switch a:hover { background: #00e5ff; color: #000; }
+        .section { margin-bottom: 12px; }
+        .divider { border: none; border-top: 1px solid #1a3550; margin: 48px 0; }
+        .contact a { color: #00e5ff; }
+        footer { margin-top: 48px; color: #4a6a88; font-size: 0.8rem; text-align: center; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>🛡 Gizlilik Politikası</h1>
+    <p class="subtitle">RAM Monitor — Yürürlük tarihi: 27 Mart 2026</p>
+    <span class="badge">📱 Android Uygulaması</span>
+
+    <div class="lang-switch">
+        <a href="#tr">🇹🇷 Türkçe</a>
+        <a href="#en">🇬🇧 English</a>
+    </div>
+
+    <!-- ─── TÜRKÇE ─── -->
+    <section id="tr">
+        <h2>🇹🇷 Türkçe</h2>
+
+        <h3>Genel Bakış</h3>
+        <p>RAM Monitor; cihaz belleği ve ağ kullanım istatistiklerini kullanıcıya göstermek amacıyla geliştirilmiş bir izleme uygulamasıdır. Uygulama herhangi bir kişisel veri <strong>toplamaz</strong>, işlemez veya dış sunuculara göndermez.</p>
+
+        <h3>Toplanan Veriler</h3>
+        <p>RAM Monitor aşağıdaki kişisel verileri <strong>toplamaz</strong>:</p>
+        <ul>
+            <li>Ad, soyad, e-posta veya telefon numarası</li>
+            <li>Konum bilgisi (GPS veya ağ tabanlı)</li>
+            <li>Fotoğraf, kamera veya mikrofon verisi</li>
+            <li>Hesap veya kimlik bilgisi</li>
+        </ul>
+        <p>Uygulama yalnızca aşağıdaki teknik verilere <strong>cihaz üzerinde</strong> erişir:</p>
+        <ul>
+            <li>Cihaz RAM kullanım değerleri</li>
+            <li>Yüklü uygulamaların kullanım istatistikleri (Usage Stats API)</li>
+            <li>Uygulama bazlı ağ kullanım miktarları</li>
+        </ul>
+
+        <h3>Verilerin Kullanımı</h3>
+        <p>Teknik veriler yalnızca şu amaçlarla kullanılır:</p>
+        <ul>
+            <li>Uygulama ekranlarında istatistik ve grafik göstermek</li>
+            <li>Geçmiş kullanım grafiklerini oluşturmak</li>
+            <li>Yüksek RAM kullanımında yerel uyarı bildirimi göndermek</li>
+        </ul>
+
+        <h3>Veri Paylaşımı</h3>
+        <p>RAM Monitor hiçbir veriyi üçüncü taraflarla <strong>paylaşmaz, satmaz</strong> veya reklam/izleme amacıyla kullanmaz.</p>
+
+        <h3>Veri Depolama</h3>
+        <p>Tüm veriler yalnızca <strong>cihaz üzerinde yerel olarak</strong> saklanır. Uygulama herhangi bir sunucuya veri göndermez.</p>
+
+        <h3>Kullanılan İzinler</h3>
+        <table>
+            <tr><th>İzin</th><th>Amaç</th></tr>
+            <tr><td><code>PACKAGE_USAGE_STATS</code></td><td>Uygulama bazlı istatistikleri göstermek için</td></tr>
+            <tr><td><code>FOREGROUND_SERVICE</code></td><td>Arka planda kesintisiz izleme için</td></tr>
+            <tr><td><code>FOREGROUND_SERVICE_DATA_SYNC</code></td><td>RAM verilerini periyodik olarak güncellemek için</td></tr>
+            <tr><td><code>POST_NOTIFICATIONS</code></td><td>İzleme bildirimleri göstermek için</td></tr>
+            <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>Yeniden başlatma sonrası izlemeyi sürdürmek için</td></tr>
+            <tr><td><code>INTERNET</code></td><td>Genel Android ağ uyumluluğu için (veri gönderilmez)</td></tr>
+        </table>
+
+        <h3>Çocukların Gizliliği</h3>
+        <p>RAM Monitor, 13 yaşından küçük çocuklara yönelik değildir. Uygulama hiçbir kullanıcıdan kişisel veri toplamaz.</p>
+
+        <h3 class="contact">İletişim</h3>
+        <p>Gizlilik politikasıyla ilgili sorularınız için: <a href="mailto:ggwebsitex@gmail.com">ggwebsitex@gmail.com</a></p>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ─── ENGLISH ─── -->
+    <section id="en">
+        <h2>🇬🇧 English</h2>
+
+        <h3>Overview</h3>
+        <p>RAM Monitor is a monitoring application designed to display device memory and network usage statistics to the user. The app does <strong>not collect</strong>, process, or transmit any personal data to external servers.</p>
+
+        <h3>Data Collection</h3>
+        <p>RAM Monitor does <strong>not</strong> collect:</p>
+        <ul>
+            <li>Name, email address, or phone number</li>
+            <li>Location data (GPS or network-based)</li>
+            <li>Photos, camera, or microphone data</li>
+            <li>Account or identity information</li>
+        </ul>
+        <p>The app accesses only the following technical data <strong>on-device</strong>:</p>
+        <ul>
+            <li>Device RAM usage values</li>
+            <li>Installed app usage statistics (Usage Stats API)</li>
+            <li>Per-app network usage totals</li>
+        </ul>
+
+        <h3>How Data Is Used</h3>
+        <p>Technical data is used only to:</p>
+        <ul>
+            <li>Display statistics and charts in the app</li>
+            <li>Generate usage history graphs</li>
+            <li>Send local alert notifications for high RAM usage</li>
+        </ul>
+
+        <h3>Data Sharing</h3>
+        <p>RAM Monitor does <strong>not sell or share</strong> any data with third parties for advertising or tracking purposes.</p>
+
+        <h3>Data Storage</h3>
+        <p>All data is stored <strong>locally on the device only</strong>. The app does not send data to any remote server.</p>
+
+        <h3>Permissions Used</h3>
+        <table>
+            <tr><th>Permission</th><th>Purpose</th></tr>
+            <tr><td><code>PACKAGE_USAGE_STATS</code></td><td>To show per-app usage statistics</td></tr>
+            <tr><td><code>FOREGROUND_SERVICE</code></td><td>For continuous background monitoring</td></tr>
+            <tr><td><code>FOREGROUND_SERVICE_DATA_SYNC</code></td><td>To periodically update RAM data</td></tr>
+            <tr><td><code>POST_NOTIFICATIONS</code></td><td>To display monitoring notifications</td></tr>
+            <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>To resume monitoring after device restart</td></tr>
+            <tr><td><code>INTERNET</code></td><td>General Android network compatibility (no data sent)</td></tr>
+        </table>
+
+        <h3>Children's Privacy</h3>
+        <p>RAM Monitor is not directed at children under 13 years of age. The app does not collect personal data from any user.</p>
+
+        <h3 class="contact">Contact</h3>
+        <p>For privacy-related questions: <a href="mailto:ggwebsitex@gmail.com">ggwebsitex@gmail.com</a></p>
+    </section>
+
+    <footer>
+        <p>RAM Monitor © 2026 — Bu politika en son 27 Mart 2026 tarihinde güncellenmiştir.</p>
+    </footer>
+
+</div>
+</body>
+</html>
+
