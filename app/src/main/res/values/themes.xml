@@ -7,8 +7,6 @@
         <item name="colorSurface">@color/surface_dark</item>
         <item name="colorOnSurface">@color/text_primary</item>
         <item name="android:windowBackground">@color/bg_dark</item>
-        <item name="android:statusBarColor">@color/surface_dark</item>
-        <item name="android:navigationBarColor">@color/bg_dark</item>
     </style>
 
     <style name="SmallTabText" parent="@android:style/TextAppearance.Small">

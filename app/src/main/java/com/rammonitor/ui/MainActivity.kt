@@ -4,9 +4,13 @@ import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
+import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updatePadding
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.google.android.material.tabs.TabLayoutMediator
@@ -26,8 +30,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupEdgeToEdgeInsets()
 
         viewModel = ViewModelProvider(this)[MainViewModel::class.java]
 
@@ -40,6 +46,25 @@ class MainActivity : AppCompatActivity() {
         startMonitorService()
         viewModel.startPolling()
         promptUsageStatsIfNeeded()
+    }
+
+    private fun setupEdgeToEdgeInsets() {
+        val initialLeft = binding.root.paddingLeft
+        val initialTop = binding.root.paddingTop
+        val initialRight = binding.root.paddingRight
+        val initialBottom = binding.root.paddingBottom
+
+        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { view, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            view.updatePadding(
+                left = initialLeft + systemBars.left,
+                top = initialTop + systemBars.top,
+                right = initialRight + systemBars.right,
+                bottom = initialBottom + systemBars.bottom
+            )
+            insets
+        }
+        ViewCompat.requestApplyInsets(binding.root)
     }
 
     private fun promptUsageStatsIfNeeded() {
