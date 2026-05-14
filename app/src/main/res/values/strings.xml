@@ -84,4 +84,12 @@
     <string name="service_alert_text">RAM usage reached %1$.1f%%</string>
     <string name="service_channel_name">RAM Monitor</string>
     <string name="service_channel_desc">Live RAM usage notifications</string>
+
+    <!-- Privacy policy consent dialog (shown on first launch) -->
+    <string name="privacy_dialog_title">Privacy Policy</string>
+    <string name="privacy_dialog_message">Welcome to RAM Monitor.\n\nThis app processes RAM and network usage information ONLY on your device. We do not collect, sell, or share any personal data.\n\nPlease read our Privacy Policy before using the app.\n\nBy tapping \"Agree\", you confirm that you have read and accepted the Privacy Policy.</string>
+    <string name="privacy_dialog_view">View Privacy Policy</string>
+    <string name="privacy_dialog_agree">Agree</string>
+    <string name="privacy_dialog_disagree">Disagree &amp; Exit</string>
+    <string name="privacy_policy_url">https://gogonuldas.github.io/RamMonitor/privacy_policy.html</string>
 </resources>

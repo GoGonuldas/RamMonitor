@@ -4,10 +4,11 @@ Outputs:
   app/play-store-icon-512.png            (Store icon 512x512)
   app/play-store-icon-216.png            (Huawei alt boyut)
   app/play-feature-graphic-1024x500.png  (Feature graphic)
-
-Tasarım: Koyu mavi degrade arka plan + beyaz "memory chip" çerçeve içinde
-yükselen bar chart (RAM kullanımı metaforu) + alt köşede yeşil aktivite noktası.
+  app/src/main/res/mipmap-*/ic_launcher.png
+  app/src/main/res/mipmap-*/ic_launcher_round.png
+  app/src/main/res/mipmap-*/ic_launcher_foreground.png
 """
+
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 import os
 
@@ -161,10 +162,107 @@ def make_feature_graphic():
     return img
 
 
+def make_foreground(size=1024):
+    """Adaptive icon foreground (transparent bg, only chip+bars centered, 66% safe zone)."""
+    img = Image.new("RGBA", (size, size), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(img)
+    s = size
+    accent = (88, 160, 255)
+    bar_low = (90, 200, 140)
+    bar_mid = (255, 200, 80)
+    bar_high = (255, 110, 110)
+    white = (255, 255, 255)
+
+    # 66% safe zone -> chip occupies ~50% of size in center
+    pad = int(s * 0.28)
+    chip_box = [pad, pad, s - pad, s - pad]
+    chip_radius = int(s * 0.06)
+    border = int(s * 0.022)
+    draw.rounded_rectangle(chip_box, radius=chip_radius,
+                           outline=white + (255,), width=border)
+
+    pin_w = int(s * 0.014)
+    pin_h = int(s * 0.03)
+    pin_gap = int(s * 0.055)
+    pin_y_positions = [chip_box[1] + int(s * 0.09) + i * pin_gap for i in range(4)]
+    for py in pin_y_positions:
+        draw.rounded_rectangle(
+            [chip_box[0] - pin_h, py, chip_box[0], py + pin_w * 2],
+            radius=pin_w, fill=accent + (255,))
+        draw.rounded_rectangle(
+            [chip_box[2], py, chip_box[2] + pin_h, py + pin_w * 2],
+            radius=pin_w, fill=accent + (255,))
+
+    inner_pad = int(s * 0.05)
+    inner_box = [chip_box[0] + inner_pad, chip_box[1] + inner_pad,
+                 chip_box[2] - inner_pad, chip_box[3] - inner_pad]
+    iw = inner_box[2] - inner_box[0]
+    ih = inner_box[3] - inner_box[1]
+
+    bars = 5
+    gap = int(iw * 0.06)
+    bar_w = (iw - gap * (bars - 1)) // bars
+    heights = [0.30, 0.55, 0.42, 0.78, 0.92]
+    colors = [bar_low, bar_low, bar_mid, bar_mid, bar_high]
+    base_y = inner_box[3]
+    for i in range(bars):
+        x0 = inner_box[0] + i * (bar_w + gap)
+        bh = int(ih * heights[i])
+        y0 = base_y - bh
+        draw.rounded_rectangle(
+            [x0, y0, x0 + bar_w, base_y],
+            radius=int(bar_w * 0.22),
+            fill=colors[i] + (255,))
+    return img
+
+
+def make_round_icon(size):
+    """Circular version of full icon for round launcher icon."""
+    base = make_icon(size)
+    mask = Image.new("L", (size, size), 0)
+    ImageDraw.Draw(mask).ellipse([0, 0, size - 1, size - 1], fill=255)
+    out = Image.new("RGBA", (size, size), (0, 0, 0, 0))
+    out.paste(base, (0, 0), mask)
+    return out
+
+
+# Mipmap density sizes for Android launcher icon
+MIPMAP_DENSITIES = {
+    "mipmap-mdpi": 48,
+    "mipmap-hdpi": 72,
+    "mipmap-xhdpi": 96,
+    "mipmap-xxhdpi": 144,
+    "mipmap-xxxhdpi": 192,
+}
+# Adaptive foreground is 108dp -> bigger
+MIPMAP_FOREGROUND_DENSITIES = {
+    "mipmap-mdpi": 108,
+    "mipmap-hdpi": 162,
+    "mipmap-xhdpi": 216,
+    "mipmap-xxhdpi": 324,
+    "mipmap-xxxhdpi": 432,
+}
+
+
 def save(img, name):
     path = os.path.abspath(os.path.join(OUT_DIR, name))
     img.save(path, "PNG", optimize=True)
     print("wrote", path)
+
+
+def save_mipmaps():
+    res_dir = os.path.abspath(os.path.join(OUT_DIR, "src", "main", "res"))
+    for folder, size in MIPMAP_DENSITIES.items():
+        d = os.path.join(res_dir, folder)
+        os.makedirs(d, exist_ok=True)
+        make_icon(size).save(os.path.join(d, "ic_launcher.png"), "PNG", optimize=True)
+        make_round_icon(size).save(os.path.join(d, "ic_launcher_round.png"), "PNG", optimize=True)
+        print("wrote", d, "ic_launcher.png + ic_launcher_round.png")
+    for folder, size in MIPMAP_FOREGROUND_DENSITIES.items():
+        d = os.path.join(res_dir, folder)
+        os.makedirs(d, exist_ok=True)
+        make_foreground(size).save(os.path.join(d, "ic_launcher_foreground.png"), "PNG", optimize=True)
+        print("wrote", d, "ic_launcher_foreground.png")
 
 
 if __name__ == "__main__":
@@ -174,9 +272,9 @@ if __name__ == "__main__":
     icon216 = make_icon(216)
     save(icon216, "play-store-icon-216.png")
 
-    # Adaptive icon foreground (Android launcher 432x432 safe zone in 512)
     save(make_icon(1024), "play-store-icon-1024.png")
 
     fg = make_feature_graphic()
     save(fg, "play-feature-graphic-1024x500.png")
 
+    save_mipmaps()

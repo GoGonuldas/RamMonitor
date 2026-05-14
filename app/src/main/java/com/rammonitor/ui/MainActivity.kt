@@ -1,6 +1,8 @@
 package com.rammonitor.ui
 
+import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
@@ -37,12 +39,59 @@ class MainActivity : AppCompatActivity() {
 
         viewModel = ViewModelProvider(this)[MainViewModel::class.java]
 
+        setupTabs()
+
+        if (hasPrivacyConsent()) {
+            initAfterConsent()
+        } else {
+            showPrivacyConsentDialog()
+        }
+    }
+
+    private fun prefs() = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+
+    private fun hasPrivacyConsent(): Boolean =
+        prefs().getBoolean(KEY_PRIVACY_ACCEPTED, false)
+
+    private fun setPrivacyAccepted() {
+        prefs().edit().putBoolean(KEY_PRIVACY_ACCEPTED, true).apply()
+    }
+
+    private fun showPrivacyConsentDialog() {
+        AlertDialog.Builder(this)
+            .setTitle(getString(R.string.privacy_dialog_title))
+            .setMessage(getString(R.string.privacy_dialog_message))
+            .setCancelable(false)
+            .setPositiveButton(getString(R.string.privacy_dialog_agree)) { dialog, _ ->
+                setPrivacyAccepted()
+                dialog.dismiss()
+                initAfterConsent()
+            }
+            .setNegativeButton(getString(R.string.privacy_dialog_disagree)) { _, _ ->
+                finishAffinity()
+            }
+            .setNeutralButton(getString(R.string.privacy_dialog_view)) { _, _ ->
+                openPrivacyPolicy()
+                // Re-show dialog after returning
+                showPrivacyConsentDialog()
+            }
+            .show()
+    }
+
+    private fun openPrivacyPolicy() {
+        try {
+            startActivity(
+                Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.privacy_policy_url)))
+            )
+        } catch (_: Exception) { /* ignore */ }
+    }
+
+    private fun initAfterConsent() {
         // Request notification permission on Android 13+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             notifPermission.launch(android.Manifest.permission.POST_NOTIFICATIONS)
         }
 
-        setupTabs()
         startMonitorService()
         viewModel.startPolling()
         promptUsageStatsIfNeeded()
@@ -110,11 +159,16 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        viewModel.startPolling()
+        if (hasPrivacyConsent()) viewModel.startPolling()
     }
 
     override fun onPause() {
         super.onPause()
         viewModel.stopPolling()
+    }
+
+    companion object {
+        private const val PREFS_NAME = "ram_monitor_prefs"
+        private const val KEY_PRIVACY_ACCEPTED = "privacy_accepted"
     }
 }
