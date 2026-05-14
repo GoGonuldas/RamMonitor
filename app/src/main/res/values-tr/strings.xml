@@ -83,6 +83,13 @@
     <string name="service_alert_text">RAM kullanımı %1$.1f%%\'e ulaştı</string>
     <string name="service_channel_name">RAM Monitor</string>
     <string name="service_channel_desc">Anlık RAM kullanım bildirimleri</string>
+
+    <!-- Privacy policy consent dialog (shown on first launch) -->
+    <string name="privacy_dialog_title">Gizlilik Politikası</string>
+    <string name="privacy_dialog_message">RAM Monitor\'a hoş geldiniz.\n\nBu uygulama RAM ve ağ kullanım bilgilerini YALNIZCA cihazınızda işler. Hiçbir kişisel veriyi toplamaz, satmaz veya paylaşmaz.\n\nUygulamayı kullanmadan önce lütfen Gizlilik Politikamızı okuyun.\n\n\"Kabul Et\" düğmesine basarak Gizlilik Politikasını okuduğunuzu ve kabul ettiğinizi onaylamış olursunuz.</string>
+    <string name="privacy_dialog_view">Gizlilik Politikasını Görüntüle</string>
+    <string name="privacy_dialog_agree">Kabul Et</string>
+    <string name="privacy_dialog_disagree">Reddet ve Çık</string>
 </resources>
 
 
