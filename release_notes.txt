@@ -1,0 +1,17 @@
+RAM Monitor v1.2.5 (build 9) - Test sürümü
+
+Yenilikler:
+- İlk açılışta gizlilik politikası onay penceresi eklendi (Huawei reddine yönelik)
+- Uygulama simgesi yenilendi: store ikonu ile telefondaki launcher simgesi artık aynı
+- Mipmap launcher ikonları (mdpi → xxxhdpi) + adaptive icon eklendi
+- Privacy URL artık https://gogonuldas.github.io/RamMonitor/privacy_policy.html
+- versionCode: 9, versionName: 1.2.5
+
+Test edilecekler:
+1. İlk açılışta gizlilik dialog'u görünüyor mu?
+2. "Reddet ve Çık" çalışıyor mu?
+3. "Gizlilik Politikasını Görüntüle" linki tarayıcıda açılıyor mu?
+4. "Kabul Et" sonrası uygulama normal başlıyor mu?
+5. Launcher'da gözüken simge store icon ile aynı mı?
+6. Uygulamayı kaldırıp tekrar kurunca dialog yine geliyor mu?
+
