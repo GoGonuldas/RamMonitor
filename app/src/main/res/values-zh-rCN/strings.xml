@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RAM Monitor</string>
+    <string name="tab_dashboard">实时</string>
+    <string name="tab_apps">应用</string>
+    <string name="tab_history">历史</string>
+    <string name="tab_dashboard_icon">📊 实时</string>
+    <string name="tab_apps_icon">📱 应用</string>
+    <string name="tab_history_icon">📈 历史</string>
+    <string name="tab_network_icon">🌐 网络</string>
+
+    <string name="perm_title">需要应用列表权限</string>
+    <string name="perm_desc">要查看YouTube和其他应用的RAM使用情况，您需要授予"使用权限"。\n\n在Android 8+设备上需要此权限。</string>
+    <string name="perm_button">⚙ 授予使用权限</string>
+    <string name="perm_steps">设置 → 应用 → 特殊应用权限\n→ 使用权限 → RAM Monitor → 启用</string>
+
+    <string name="apps_info_limited">由于Android限制，某些应用的RAM值可能无法读取。</string>
+    <string name="apps_filter_known_only">仅显示具有RAM数据的应用</string>
+    <string name="apps_count_with_unknown">%1$d个应用(RAM未知: %2$d)</string>
+    <string name="apps_unknown_ram">RAM: —</string>
+    <string name="apps_unknown_ram_reason">Android限制</string>
+    <string name="apps_ram_value">RAM: %1$.1f MB</string>
+    <string name="apps_uss_value">USS: %1$.1f MB</string>
+    <string name="app_list_loading">加载中…</string>
+
+    <string name="network_info">显示过去24小时内应用使用的网络数据。</string>
+    <string name="network_empty">未找到网络数据。</string>
+    <string name="network_perm_title">需要网络使用权限</string>
+    <string name="network_perm_desc">要查看应用的网络使用情况，您需要授予"使用权限"。\n\n设置 → 应用 → 特殊应用权限 → 使用权限 → RAM Monitor → 启用</string>
+    <string name="network_count">%1$d个应用</string>
+    <string name="network_count_zero">0个应用</string>
+    <string name="network_total_mb">总计: %1$.1f MB</string>
+    <string name="network_rx_mb">↓ %1$.1f MB</string>
+    <string name="network_tx_mb">↑ %1$.1f MB</string>
+    <string name="live_traffic_empty">目前没有活跃的网络流量。\n当应用传输数据时会在此显示。</string>
+    <string name="network_download_title">下载</string>
+    <string name="network_upload_title">上传</string>
+    <string name="network_tab_live">🔴 实时</string>
+    <string name="network_tab_24h">📊 24小时</string>
+    <string name="network_speed_mb_s">%1$.1f MB/s</string>
+    <string name="network_speed_kb_s">%1$.1f KB/s</string>
+    <string name="network_speed_b_s">%1$d B/s</string>
+    <string name="network_rx_speed">↓ %1$s</string>
+    <string name="network_tx_speed">↑ %1$s</string>
+
+    <string name="header_status_active">活跃</string>
+    <string name="dashboard_usage_title">使用情况</string>
+    <string name="dashboard_usage_initial">0%%</string>
+    <string name="dashboard_used_placeholder">已用: -- MB</string>
+    <string name="dashboard_free_placeholder">可用: -- MB</string>
+    <string name="dashboard_live_chart_title">实时图表(最后60个样本)</string>
+    <string name="dashboard_usage_percent">%1$.1f%%</string>
+    <string name="dashboard_used_ram">已用: %1$.0f MB / %2$.0f MB</string>
+    <string name="dashboard_free_ram">可用: %1$.0f MB</string>
+
+    <string name="history_min_short">最小</string>
+    <string name="history_avg_short">平均</string>
+    <string name="history_max_short">最大</string>
+    <string name="history_last_hour_title">最后1小时</string>
+    <string name="history_avg_placeholder">平均: --</string>
+    <string name="history_peak_placeholder">峰值: --</string>
+    <string name="history_samples_placeholder">-- 个样本</string>
+    <string name="history_chart_title">历史图表</string>
+    <string name="history_min_value">最小值: %1$.1f%%</string>
+    <string name="history_max_value">最大值: %1$.1f%%</string>
+    <string name="history_avg_value">平均值: %1$.1f%%</string>
+    <string name="history_samples_count">%1$d 个样本</string>
+    <string name="history_last_hour_avg">最后1小时平均值: %1$.1f%%</string>
+    <string name="history_last_hour_peak">最后1小时峰值: %1$.1f%%</string>
+
+    <string name="usage_dialog_title">需要应用访问权限</string>
+    <string name="usage_dialog_message">要查看其他应用的RAM使用情况，您需要授予"使用权限"。\n\n设置 → 应用 → 特殊应用权限 → 使用权限 → RAM Monitor → 启用</string>
+    <string name="usage_dialog_open_settings">打开设置</string>
+    <string name="usage_dialog_later">稍后</string>
+
+    <string name="chart_ram_percent_label">RAM %%</string>
+    <string name="common_refresh">刷新</string>
+
+    <string name="service_monitoring">正在监控RAM…</string>
+    <string name="service_notification_text">RAM: %1$.1f%% — %2$.0f / %3$.0f MB</string>
+    <string name="service_title">RAM Monitor</string>
+    <string name="service_stop">停止</string>
+    <string name="service_alert_title">⚠️ RAM使用率过高！</string>
+    <string name="service_alert_text">RAM使用率达到 %1$.1f%%</string>
+    <string name="service_channel_name">RAM Monitor</string>
+    <string name="service_channel_desc">实时RAM使用通知</string>
+
+    <!-- Privacy policy consent dialog (shown on first launch) -->
+    <string name="privacy_dialog_title">隐私政策</string>
+    <string name="privacy_dialog_message">欢迎使用RAM Monitor。\n\n此应用仅在您的设备上处理RAM和网络使用信息。我们不收集、出售或共享任何个人数据。\n\n请在使用该应用前阅读我们的隐私政策。\n\n点按"同意"即表示您确认已阅读并接受隐私政策。</string>
+    <string name="privacy_dialog_view">查看隐私政策</string>
+    <string name="privacy_dialog_agree">同意</string>
+    <string name="privacy_dialog_disagree">不同意并退出</string>
+    <string name="privacy_policy_url">https://gogonuldas.github.io/RamMonitor/privacy_policy.html</string>
+
+    <!-- Background monitoring consent dialog -->
+    <string name="monitoring_dialog_title">启用后台监控？</string>
+    <string name="monitoring_dialog_message">RAM Monitor 使用后台服务提供持续的 RAM 监控和警报。这将在您的状态栏中显示持续通知。\n\n您可以随时通过通知中的停止按钮禁用监控。</string>
+    <string name="monitoring_dialog_enable">启用监控</string>
+    <string name="monitoring_dialog_disable">暂时禁用</string>
+</resources>
+

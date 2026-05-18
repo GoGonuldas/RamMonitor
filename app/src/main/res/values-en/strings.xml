@@ -91,5 +91,12 @@
     <string name="privacy_dialog_view">View Privacy Policy</string>
     <string name="privacy_dialog_agree">Agree</string>
     <string name="privacy_dialog_disagree">Disagree &amp; Exit</string>
+    <string name="privacy_policy_url">https://gogonuldas.github.io/RamMonitor/privacy_policy.html</string>
+
+    <!-- Background monitoring consent dialog -->
+    <string name="monitoring_dialog_title">Enable Background Monitoring?</string>
+    <string name="monitoring_dialog_message">RAM Monitor uses a background service to provide continuous RAM monitoring and alerts. This will display a persistent notification in your status bar.\n\nYou can disable monitoring anytime through the Stop button in the notification.</string>
+    <string name="monitoring_dialog_enable">Enable Monitoring</string>
+    <string name="monitoring_dialog_disable">Disable for Now</string>
 </resources>
 

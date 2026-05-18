@@ -92,9 +92,27 @@ class MainActivity : AppCompatActivity() {
             notifPermission.launch(android.Manifest.permission.POST_NOTIFICATIONS)
         }
 
-        startMonitorService()
-        viewModel.startPolling()
-        promptUsageStatsIfNeeded()
+        // Request explicit user consent for background monitoring service
+        promptBackgroundMonitoringConsent()
+    }
+
+    private fun promptBackgroundMonitoringConsent() {
+        AlertDialog.Builder(this)
+            .setTitle(getString(R.string.monitoring_dialog_title))
+            .setMessage(getString(R.string.monitoring_dialog_message))
+            .setCancelable(false)
+            .setPositiveButton(getString(R.string.monitoring_dialog_enable)) { dialog, _ ->
+                dialog.dismiss()
+                startMonitorService()
+                viewModel.startPolling()
+                promptUsageStatsIfNeeded()
+            }
+            .setNegativeButton(getString(R.string.monitoring_dialog_disable)) { _, _ ->
+                // User can still use the app, but without background monitoring
+                viewModel.startPolling()
+                promptUsageStatsIfNeeded()
+            }
+            .show()
     }
 
     private fun setupEdgeToEdgeInsets() {

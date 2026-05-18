@@ -45,6 +45,7 @@
 
     <string name="header_status_active">Aktif</string>
     <string name="dashboard_usage_title">KULLANIM</string>
+    <string name="dashboard_usage_initial">0%%</string>
     <string name="dashboard_used_placeholder">Kullanılan: -- MB</string>
     <string name="dashboard_free_placeholder">Boş: -- MB</string>
     <string name="dashboard_live_chart_title">CANLI GRAFİK (Son 60 ölçüm)</string>
@@ -90,6 +91,13 @@
     <string name="privacy_dialog_view">Gizlilik Politikasını Görüntüle</string>
     <string name="privacy_dialog_agree">Kabul Et</string>
     <string name="privacy_dialog_disagree">Reddet ve Çık</string>
+    <string name="privacy_policy_url">https://gogonuldas.github.io/RamMonitor/privacy_policy.html</string>
+
+    <!-- Background monitoring consent dialog -->
+    <string name="monitoring_dialog_title">Arka Planda İzleme Başlasın mı?</string>
+    <string name="monitoring_dialog_message">RAM Monitor, kesintisiz RAM izleme ve uyarıları sağlamak için arka planda çalışan hizmet kullanır. Bu, durum çubuğunuzda kalıcı bir bildirim gösterecektir.\n\nBildirimdeki Durdur düğmesi aracılığıyla izlemeyi istediğiniz zaman devre dışı bırakabilirsiniz.</string>
+    <string name="monitoring_dialog_enable">İzlemeyi Başlat</string>
+    <string name="monitoring_dialog_disable">Şimdilik Devre Dışı Bırak</string>
 </resources>
 
 
