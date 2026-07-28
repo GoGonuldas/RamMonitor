@@ -1,4 +1,4 @@
-RAM Monitor v1.2.5 (build 9) - Test sürümü
+RAM Monitor v1.2.7 (build 11) - Test sürümü
 
 Yenilikler:
 - Gizlilik politikasına geliştirici adı eklendi: Gorkan Gönüldaş
@@ -6,7 +6,8 @@ Yenilikler:
 - Uygulama arka plan izleme için açık kullanıcı onayı istiyor
 - İlk açılış gizlilik/onay akışı Huawei AppGallery gereksinimlerine göre güncellendi
 - Privacy URL: https://gogonuldas.github.io/RamMonitor/privacy_policy.html
-- versionCode: 9, versionName: 1.2.5
+- Android hedef sürümü API 36 (targetSdk 36) olarak güncellendi
+- versionCode: 11, versionName: 1.2.7
 
 Test edilecekler:
 1. İlk açılışta gizlilik dialog'u görünüyor mu?

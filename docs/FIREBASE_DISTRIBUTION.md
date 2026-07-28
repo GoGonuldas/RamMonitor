@@ -40,7 +40,7 @@ firebase appdistribution:distribute \
   app/build/outputs/apk/release/app-release.apk \
   --app 1:1048044952881:android:58997e2e39339614e9a410 \
   --release-notes-file release_notes.txt \
-  --testers "grkngnlds@gmail.com"
+  --testers "gorkan.gonuldas@gmail.com"
 ```
 
 ### Birden fazla testçiye gönderme
